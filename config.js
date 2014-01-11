@@ -13,16 +13,16 @@ config = {
         // Example mail config
         // Visit http://docs.ghost.org/mail for instructions
         // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
+        mail: {
+         transport: 'SMTP',
+         options: {
+             service: 'Mailgun',
+             auth: {
+                 user: 'postmaster@sandbox55221.mailgun.org', // mailgun username
+                 pass: '507cc8v7iis2'  // mailgun password
+             }
+         }
+        },
         // ```
 
         database: {
@@ -45,7 +45,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://tobiasjohansson.se',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'postmaster@sandbox55221.mailgun.org',
+                    pass: '507cc8v7iis2'
+                }
+            }
+        },
         database: {
             client: 'mysql',
             connection: {
