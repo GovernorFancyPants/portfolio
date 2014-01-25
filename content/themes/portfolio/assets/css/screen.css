@@ -448,6 +448,10 @@ table.plain {
     line-height: 1.6em;
 }
 
+.post-excerpt a {
+    float: right;
+}
+
 .post-meta {
     display: inline-block;
     margin: 0 0 5px 0;
@@ -698,13 +702,25 @@ table.plain {
     position: absolute;
     top: -14px;
     left: 50%;
-    margin-left: -15px;
+    margin-left: 20px;
     border: #EBF2F6 1px solid;
     text-align: center;
     line-height: 2.4rem;
     border-radius: 50px;
     background: #fff;
     transition: box-shadow 0.5s;
+}
+.subscribe.twitter {
+    margin-left: -50px;
+}
+.subscribe.my-website {
+    background-image: url(https://secure.gravatar.com/avatar/808cb28b17609fdd011c260af544fe00?s=64);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    margin-left: -15px;
+}
+.subscribe.my-website:hover {
+    box-shadow: none;
 }
 
 /* The RSS icon, inserted via icon font */
@@ -735,7 +751,7 @@ table.plain {
     padding: 4px 8px 5px 8px;
     position:absolute;
     top: -23px;
-    left: -23px;
+    left: -20px;
     color: rgba(255,255,255,0.9);
     font-size: 1.1rem;
     font-weight: bold;
@@ -743,6 +759,7 @@ table.plain {
     text-align: center;
     background: #50585D;
     border-radius:20px;
+    white-space: nowrap;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     transition: opacity 0.3s ease, top 0.3s ease;
 }
