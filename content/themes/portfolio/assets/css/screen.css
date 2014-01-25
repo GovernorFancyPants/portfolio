@@ -42,7 +42,7 @@
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook, .icon-codepen {
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -57,20 +57,23 @@
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
 .icon-ghost:before {
-    content: "\e000";
+    content: "\e600";
 }
 .icon-feed:before {
-    content: "\e001";
+    content: "\e605";
 }
 .icon-twitter:before {
-    content: "\e002";
+    content: "\e604";
     font-size: 1.1em;
 }
 .icon-google-plus:before {
-    content: "\e003";
+    content: "\e603";
 }
 .icon-facebook:before {
-    content: "\e004";
+    content: "\e604";
+}
+.icon-codepen:before {
+    content: "\e601";
 }
 
 
@@ -403,6 +406,24 @@ table.plain {
     letter-spacing: 0;
 }
 
+.author {
+    margin-top: 10px;
+}
+
+.author .profile-img {
+    margin-right: 5px;
+    position: relative;
+    top: -5px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.author h4 {
+    font-size: 1.8rem;
+}
+
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
@@ -713,23 +734,17 @@ table.plain {
 .subscribe.twitter {
     margin-left: -50px;
 }
-.subscribe.my-website {
-    background-image: url(https://secure.gravatar.com/avatar/808cb28b17609fdd011c260af544fe00?s=64);
-    background-size: 30px;
-    background-repeat: no-repeat;
+.subscribe.codepen {
     margin-left: -15px;
-}
-.subscribe.my-website:hover {
-    box-shadow: none;
 }
 
 /* The RSS icon, inserted via icon font */
 .subscribe:before {
     color: #D2DEE3;
-    font-size: 10px;
+    font-size: 16px;
     position: absolute;
     top: 2px;
-    left: 9px;
+    left: 6px;
     font-weight: bold;
     transition: color 0.5s ease;
 }
@@ -921,6 +936,10 @@ table.plain {
         margin: 0 0 2rem 0;
         padding: 0 0 1.6rem 0;
         border-bottom: #EBF2F6 1px dashed;
+    }
+
+    .post-footer .author .profile-img {
+        float: none;
     }
 
     .post-footer .share {
